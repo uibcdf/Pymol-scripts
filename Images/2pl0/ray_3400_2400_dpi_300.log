@@ -1,0 +1,56 @@
+PyMOL>load 2pl0.pdb
+HEADER    TRANSFERASE                             18-APR-07   2PL0
+TITLE     LCK BOUND TO IMATINIB
+COMPND    MOL_ID: 1;
+COMPND   2 MOLECULE: PROTO-ONCOGENE TYROSINE-PROTEIN KINASE LCK;
+COMPND   3 CHAIN: A;
+COMPND   4 FRAGMENT: PROTEIN KINASE;
+COMPND   5 SYNONYM: P56-LCK, LYMPHOCYTE CELL-SPECIFIC PROTEIN-
+COMPND   6 TYROSINE KINASE, LSK, T CELL- SPECIFIC PROTEIN-TYROSINE
+COMPND   7 KINASE;
+COMPND   8 EC: 2.7.10.2;
+COMPND   9 ENGINEERED: YES
+ ObjectMolecule: Read secondary structure assignments.
+ ObjectMolecule: Read crystal symmetry information.
+ Symmetry: Found 4 symmetry operators.
+ CmdLoad: "2pl0.pdb" loaded as "2pl0".
+PyMOL>remove solvent
+ Remove: eliminated 93 atoms in model "2pl0".
+PyMOL>select protein, chain A
+ Selector: selection "protein" defined with 2219 atoms.
+PyMOL>select imatinib, resname STI
+ Selector: selection "imatinib" defined with 37 atoms.
+PyMOL>bg_color white
+PyMOL>hide lines, protein
+PyMOL>show surface, protein
+PyMOL>set transparency, 0.7
+ Setting: transparency set to 0.70000.
+PyMOL>set surface_color, marine, protein
+ Setting: surface_color set for 2219 atoms in object "2pl0".
+PyMOL>show cartoon, protein
+PyMOL>set cartoon_color, marine, protein
+ Setting: cartoon_color set for 2219 atoms in object "2pl0".
+PyMOL>show spheres, imatinib
+PyMOL>util.cbao imatinib
+ Executive: Colored 8 atoms.
+ Executive: Colored 29 atoms.
+PyMOL>set_view (\
+PyMOL>0.812490106,   -0.533163249,   -0.235763222,\
+PyMOL>0.109224021,    0.536482751,   -0.836809874,\
+PyMOL>0.572646022,    0.654149473,    0.494122833,\
+PyMOL>-0.000253588,    0.000127252, -152.205123901,\
+PyMOL>30.163061142,   18.254085541,   14.142078400,\
+PyMOL>-3523.860839844, 3828.307861328,  -20.000000000 )
+ Scene: view updated.
+PyMOL>set antialias, 1
+ Setting: antialias set to 1.
+PyMOL>set surface_quality, 2
+ Setting: surface_quality set to 2.
+PyMOL>set opaque_background, off
+ Setting: opaque_background set to off.
+PyMOL>set ray_trace_mode, 1
+ Setting: ray_trace_mode set to 1.
+PyMOL>ray 3400, 2400
+ Ray: render time: 5348.94 sec. = 0.7 frames/hour (5348.94 sec. accum.).
+PyMOL>png test.png, dpi=300
+ ScenePNG: wrote 3400x2400 pixel image to file "test.png".

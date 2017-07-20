@@ -1,0 +1,22 @@
+remove solvent
+remove name ZN
+remove resname MAN
+remove resname BMA
+remove resname NAG
+
+select prot, chain A
+select captopril, resname X8Z
+
+bg_color white
+
+set opaque_background, off
+png test.png, dpi=300, ray=1
+
+hide lines, protein
+show surface, protein
+set transparency, 0.5
+set surface_color, marine, protein
+show cartoon, protein
+set cartoon_color, marine, protein
+
+show spheres, captopril
